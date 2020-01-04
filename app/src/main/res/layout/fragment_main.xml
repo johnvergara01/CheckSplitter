@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFrag">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/numOfPeople_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/num_of_people"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/numOfPeople_editText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/numOfPeople_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/checkTotal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/check_total"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numOfPeople_text" />
+
+        <EditText
+            android:id="@+id/checkTotal_editText"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/dollarSign_text"
+            app:layout_constraintTop_toBottomOf="@+id/numOfPeople_text" />
+
+        <TextView
+            android:id="@+id/dollarSign_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="24dp"
+            android:text="$"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/numOfPeople_text"
+            app:layout_constraintTop_toBottomOf="@+id/numOfPeople_editText" />
+
+        <TextView
+            android:id="@+id/tipPercent_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/tip_percent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkTotal_text" />
+
+        <EditText
+            android:id="@+id/tipPercent_editText"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="15"
+            android:inputType="numberDecimal"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/numOfPeople_text"
+            app:layout_constraintTop_toBottomOf="@+id/checkTotal_editText" />
+
+        <TextView
+            android:id="@+id/percentSign_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="24dp"
+            android:text="%"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/tipPercent_editText"
+            app:layout_constraintTop_toBottomOf="@+id/checkTotal_editText" />
+
+        <CheckBox
+            android:id="@+id/splitEven_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/split_evenly"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercent_text" />
+
+        <Button
+            android:id="@+id/splitCheck_button"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="72dp"
+            android:text="@string/split_check"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clear_button"
+            app:layout_constraintTop_toBottomOf="@+id/splitEven_checkBox" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/clear"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/splitCheck_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splitEven_checkBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
