@@ -102,7 +102,7 @@ public class MainFrag extends Fragment {
                 checkTotal = Double.valueOf(checkTotalText.getText().toString());
                 tipPerc = Double.valueOf(tipPercText.getText().toString());
                 if(splitEvenCB.isChecked()) {
-                    finalTotal = (checkTotal + (checkTotal * (tipPerc / 100)) / numOfPpl);
+                    finalTotal = (checkTotal + (checkTotal * (tipPerc / 100))) / numOfPpl;
                     GrandTotalFrag grandTotalFrag = new GrandTotalFrag();
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.ContentMain, grandTotalFrag).addToBackStack(null).commit();
                 }
