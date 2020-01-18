@@ -3,20 +3,20 @@ package com.johnv.checksplitter;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements MainFrag.OnFragmentInteractionListener, GrandTotalFrag.OnFragmentInteractionListener, SettingsFrag.OnFragmentInteractionListener {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+public class MainActivity extends AppCompatActivity implements MainFrag.OnFragmentInteractionListener, GrandTotalFrag.OnFragmentInteractionListener,
+        PersonEntryFragment.OnListFragmentInteractionListener, SettingsFrag.OnFragmentInteractionListener {
 
 
 
@@ -26,6 +26,19 @@ public class MainActivity extends AppCompatActivity implements MainFrag.OnFragme
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.hide();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                GrandTotalFrag grandTotalFrag = new GrandTotalFrag();
+                ft.replace(R.id.ContentMain, grandTotalFrag);
+
+            }
+        });
 
         if(savedInstanceState == null) {
             FragmentManager fm = getSupportFragmentManager();
@@ -66,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements MainFrag.OnFragme
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(Person.PersonItem item) {
 
     }
 }

@@ -107,7 +107,8 @@ public class MainFrag extends Fragment {
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.ContentMain, grandTotalFrag).addToBackStack(null).commit();
                 }
                 else {
-
+                    PersonEntryFragment personEntryFragment = new PersonEntryFragment();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.ContentMain, personEntryFragment).addToBackStack(null).commit();
                 }
             }
         });
