@@ -1,4 +1,4 @@
-package com.johnv.checksplitter;
+package johnv.checksplitter;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.johnv.checksplitter", appContext.getPackageName());
+        assertEquals("johnv.checksplitter", appContext.getPackageName());
     }
 }

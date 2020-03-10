@@ -1,15 +1,23 @@
 <resources>
-    <string name="app_name">Check Splitter</string>
+    <string name="app_name">CheckSplitter</string>
     <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_fragment_label">Main Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="settings">Settings</string>
-    <string name="num_of_people">Number of People</string>
-    <string name="check_total">Check Total</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="number_of_guests">Number of Guests</string>
+    <string name="subtotal">Subtotal</string>
     <string name="tip_percent">Tip Percent</string>
     <string name="split_evenly">Split Evenly</string>
     <string name="split_check">Split Check</string>
     <string name="clear">Clear</string>
+
+    <string name="added_tip">Added Tip</string>
+    <string name="grand_total">Grand Total</string>
     <string name="each_person_pays">Each Person Pays</string>
 </resources>

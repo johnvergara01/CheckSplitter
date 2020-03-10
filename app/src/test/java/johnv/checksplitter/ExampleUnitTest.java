@@ -1,4 +1,4 @@
-package com.johnv.checksplitter;
+package johnv.checksplitter;
 
 import org.junit.Test;
 
